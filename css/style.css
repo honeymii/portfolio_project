@@ -1,0 +1,197 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "h h h" "m m m" "p p p" "f f f";
+}
+
+/*** header ***/
+
+header {
+    grid-area: h;
+    padding-bottom: 30px;
+}
+
+.logo {
+    display: block;
+    padding: 15px 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80px;
+}
+
+.header__text h1,
+.header__text h3 {
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+}
+
+.sub__title {
+    font-size: 20px;
+    color: #444;
+    text-transform: lowercase;
+    font-family: 'Oxygen', sans-serif;
+}
+
+/*** Main ***/
+
+main {
+    grid-area: m;
+    position: relative;
+    text-align: center;
+}
+
+main img {
+    max-width: 100%;
+    padding-bottom: 10px;
+}
+
+.bio {
+    font-family: 'Oxygen', sans-serif;
+    color: #cf9da9;
+    font-size: 22px;
+    text-shadow: 1px 1px 0px #d1d1d1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bio p {
+    margin: 10px;
+}
+
+/*** Project ***/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(314px, 3fr));
+    grid-gap: 25px;
+}
+
+.proj {
+    grid-area: p;
+    padding-bottom: 35px;
+}
+
+.proj h3 {
+    font-family: "Assistant", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 2px 8px;
+    margin: 3px 0 5px;
+}
+
+article {
+    box-shadow: 0 4px 8px 0 #00000033;
+    transition: 0.3s;
+    position: relative;
+}
+
+.proj img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+article:hover {
+    box-shadow: 0 8px 18px 0 #00000033;
+}
+
+h2 {
+    font-family: "Assistant", sans-serif;
+    margin: 5px 0 10px;
+}
+
+/*** Footer ***/
+
+footer {
+    grid-area: f;
+    text-align: center;
+    font-family: "Oxygen", sans-serif;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #444;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #888;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+
+/*** Responsive ***/
+
+/* Small phones, 320px and down */
+
+@media only screen and (min-width: 300px) and (max-width: 359px) {
+    .logo {
+        width: 60px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .sub__title {
+        font-size: 18px;
+    }
+    .bio {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    article {
+        max-width: 300px;
+    }
+    .cards h3 {
+        font-size: 16px;
+    }
+}
+
+/* Phones 360px to 768px */
+
+@media only screen and (min-width: 360px) and (max-width: 765px) {
+    .logo {
+        width: 70px;
+    }
+    .title {
+        font-size: 34px;
+    }
+    .sub__title {
+        font-size: 20px;
+    }
+    .bio {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .cards h3 {
+        font-size: 16px;
+    }
+}
